@@ -1,106 +1,198 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inventory Bike</title>
-    <link rel="shortcut icon" href="https://icons.iconarchive.com/icons/elegantthemes/beautiful-flat-one-color/128/bike-icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="./estilo/estilo.css">
-</head>
+    <link
+      rel="shortcut icon"
+      href="https://icons.iconarchive.com/icons/elegantthemes/beautiful-flat-one-color/128/bike-icon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./estilo/estilo.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav>
-            <ul type="none">
-                <li>
-                    <a href="#" id="demais_paginas"><img
-                            src="https://icons.iconarchive.com/icons/arturo-wibawa/akar/128/home-icon.png">Painel</a>
-                </li>
-                <li>
-                    <a href="#" id="atual"><img
-                            src="https://icons.iconarchive.com/icons/ionic/ionicons/128/bag-outline-icon.png">Produtos</a>
-                </li>
-            </ul>
-        </nav>
+      <nav>
+        <ul type="none">
+          <li>
+            <a href="#" id="demais_paginas"
+              ><img
+                src="https://icons.iconarchive.com/icons/arturo-wibawa/akar/128/home-icon.png"
+              />Painel</a
+            >
+          </li>
+          <li>
+            <a href="#" id="atual"
+              ><img
+                src="https://icons.iconarchive.com/icons/ionic/ionicons/128/bag-outline-icon.png"
+              />Produtos</a
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <div id="cadastro" class="container">
-            <h2><span>🛒</span>Adicionar produto</h2>
+      <div id="cadastro" class="container">
+        <h2><span>🛒</span>Adicionar produto</h2>
 
-            <form action="" method="get" autocomplete="on" id="formulario">
-                <p><input type="text" required placeholder="Nome do Produto" id="nome_produto"></p>
-                <p><input type="number" required placeholder="Cod. Barra" min="1" step="1" id="cod_barra"></p>
-                <p><input type="number" required placeholder="Quantidade" min="1" step="1" id="quantidade"></p>
-                <p>
-                    <select required id="categoria">
-                        <option value="" selected>Categoria</option>
-                        <option value="PN">Aro</option>
-                        <option value="PN">Pneu</option>
-                        <option value="PN">Cubo</option>
-                        <option value="PN">Caixa de direção</option>
-                        <option value="PN">Canote</option>
-                        <option value="PN">Camara</option>
-                        <option value="PN">Catraca/K7</option>
-                        <option value="PN">Coroa</option>
-                        <Option value="PN">Corrente</Option>
-                        <option value="PN">Freio</option>
-                        <option value="PN">Guidão</option>
-                        <option value="PN">Macha</option>
-                        <option value="PN">Manopla</option>
-                        <option value="PN">Mesinha</option>
-                        <option value="PN">Movimento central</option>
-                        <option value="PN">Pedal</option>
-                        <option value="PN">Pé de vela</option>
-                        <option value="PN">Quadro</option>
-                        <option value="PN">Raio</option>
-                        <option value="PN">Selim</option>
-                        <option value="PN">Suspensão</option>
-                    </select>
-                </p>
-                <p><input type="number" required placeholder="Valor Unitário" step="0.01" id="valor"></p>
+        <form action="" method="get" autocomplete="on" id="formulario">
+          <p>
+            <input
+              type="text"
+              required
+              placeholder="Nome do Produto"
+              id="nome_produto"
+            />
+          </p>
+          <p>
+            <input
+              type="number"
+              required
+              placeholder="Cod. Barra"
+              min="1"
+              step="1"
+              id="cod_barra"
+            />
+          </p>
+          <p>
+            <input
+              type="number"
+              required
+              placeholder="Quantidade"
+              min="1"
+              step="1"
+              id="quantidade"
+            />
+          </p>
+          <p>
+            <select required id="categoria">
+              <option value="" selected disabled>Categoria</option>
 
-                <div id="container_botoes">
-                    <input type="submit" value="💾 Salvar" class="botoes">
-                    <input type="reset" value="🔄 Resetar"class="botoes"                                >
-                </div>
+              <optgroup label="Acessorios">
+                <option value="AC">Bolsa de Quadro</option>
+                <option value="AC">Capacete</option>
+                <option value="AC">Ciclocomputador</option>
+                <option value="AC">Kit reparo</option>
+                <option value="AC">Lanterna</option>
+                <option value="AC">Pino de Válvula</option>
+                <option value="AC">Pisca Alerta</option>
+                <option value="AC">Suporte</option>
+              </optgroup>
 
-                <p id="res"></p>
-            </form>
+              <optgroup label="Banco">
+                <option value="CA">Abraçadeira de Canote</option>
+                <option value="CA">Canote</option>
+                <option value="CA">Mesinha</option>
+                <option value="CA">Selim</option>
+              </optgroup>
+
+              <optgroup label="Direção">
+                <option value="DI">Caixa de direção</option>
+                <option value="DI">Guidão</option>
+                <option value="DI">Mesa</option>
+                <option value="MA">Manopla</option>
+              </optgroup>
+
+              <optgroup label="Freio">
+                <option value="FR">Freio Dianteiro</option>
+                <option value="FR">Freio Traseiro</option>
+              </optgroup>
+              <optgroup label="Quadro">
+                <option value="QU">Quadro 12</option>
+                <option value="QU">Quadro 14</option>
+                <option value="QU">Quadro 16</option>
+                <option value="QU">Quadro 20</option>
+                <option value="QU">Quadro 24</option>
+                <option value="QU">Quadro 26</option>
+                <option value="QU">Quadro 27,5</option>
+                <option value="QU">Quadro 29</option>
+                <option value="QU">Quadro 700c e 600c</option>
+              </optgroup>
+
+              <optgroup label="Rodagem">
+                <option value="RD">Aro</option>
+                <option value="RD">Pneu</option>
+                <option value="RD">Câmara</option>
+                <option value="RD">Raio</option>
+                <option value="RD">Cubo</option>
+              </optgroup>
+
+              <optgroup label="Suspensão">
+                <option value="SU">Suspensão Dianteira</option>
+                <option value="SU">Suspensão Traseira</option>
+              </optgroup>
+
+              <optgroup label="Transmissão">
+                <option value="TR">Corrente</option>
+                <option value="TR">Coroa</option>
+                <option value="TR">Catraca/K7</option>
+                <option value="TR">Pedal</option>
+                <option value="TR">Pé de vela</option>
+                <option value="TR">Movimento central</option>
+              </optgroup>
+            </select>
+          </p>
+          <p>
+            <input
+              type="number"
+              required
+              placeholder="Valor Unitário"
+              step="0.01"
+              id="valor"
+            />
+          </p>
+
+          <div id="container_botoes">
+            <input type="submit" value="💾 Salvar" class="botoes" />
+            <input type="reset" value="🔄 Resetar" class="botoes" />
+          </div>
+
+          <p id="res"></p>
+        </form>
+      </div>
+
+      <div id="lista" class="container">
+        <h2><span>📦</span>Lista de Inventário</h2>
+
+        <p>
+          <input type="text" placeholder="🔍 Pesquise o nome ou categoria" />
+        </p>
+
+        <div>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">Cod. Barra</th>
+                <th scope="col">Quantidade</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Valor</th>
+                <th scope="col">Ações</th>
+              </tr>
+            </thead>
+            <tbody id="lista_produtos">
+            </tbody>
+                
+          </table>
         </div>
-
-        <div id="lista" class="container">
-            <h2><span>📦</span>Lista de Inventário</h2>
-
-            <p><input type="text" placeholder="🔍 Pesquise o nome ou categoria"></p>
-
-            <div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th scope="col">Nome</th>
-                            <th scope="col">Cod. Barra</th>
-                            <th scope="col">Quantidade</th>
-                            <th scope="col">Categoria</th>
-                            <th scope="col">Valor</th>
-                            <th scope="col">Ações</th>
-                        </tr>
-                    </thead>
-                    <tbody id="lista_produtos">
-                    </tbody>
-                    <tfoot>
-                        <p id="res"></p>
-                    </tfoot>
-                </table>
-            </div>
-        </div>
+      </div>
     </main>
 
     <footer>
-        <p>Desenvolvido por<a href="https://github.com/felipheaquinas" target="_blank" rel="noopener noreferrer"><img src="https://icons.iconarchive.com/icons/github/octicons/128/mark-github-16-icon.png">Felipheaquinas</a></p>
+      <p>
+        Desenvolvido por<a
+          href="https://github.com/felipheaquinas"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img
+            src="https://icons.iconarchive.com/icons/github/octicons/128/mark-github-16-icon.png"
+          />Felipheaquinas</a
+        >
+      </p>
     </footer>
 
     <script src="./script/script.js"></script>
-</body>
-
+  </body>
 </html>
