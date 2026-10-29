@@ -98,10 +98,14 @@ h2 {
 
 #cadastro {
     width: 30%;
+    margin: 0 0 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #cadastro > form {
-    margin-top: 30px;
     width: 100%;
 }
 
@@ -122,17 +126,30 @@ select {
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.409);
 }
 
-input.botoes {
-    margin-top: 40px;
-    width: 48%;
-    display: inline;
-    cursor: pointer;
-    font-size: clamp(12px, 1vw, 14px);
+#container_botoes {
+    margin-top: 30px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
-input.botoes:active {
-    padding: 40px;
+.botoes {
+    margin: 0px;
+    width: 40%;
+    cursor: pointer;
+    font-size: clamp(12px, 1vw, 14px);
+    transition: transform 0.3s ease;
+}
 
+.botoes:hover {
+    transform: scale(1.1);
+}
+
+.botoes:active {
+    transform: scale(0.95);
 }
 
 #lista {

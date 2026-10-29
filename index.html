@@ -28,13 +28,13 @@
         <div id="cadastro" class="container">
             <h2><span>🛒</span>Adicionar produto</h2>
 
-            <form action="" method="get" autocomplete="on">
-                <p><input type="text" required placeholder="Nome do Produto" id="nome_do_produto"></p>
-                <p><input type="number" required placeholder="Cod. Barra" min="1" step="1"></p>
-                <p><input type="number" required placeholder="Quantidade" min="1" step="1"></p>
+            <form action="" method="get" autocomplete="on" id="formulario">
+                <p><input type="text" required placeholder="Nome do Produto" id="nome_produto"></p>
+                <p><input type="number" required placeholder="Cod. Barra" min="1" step="1" id="cod_barra"></p>
+                <p><input type="number" required placeholder="Quantidade" min="1" step="1" id="quantidade"></p>
                 <p>
-                    <select required>
-                        <option disabled selected>Categoria</option>
+                    <select required id="categoria">
+                        <option value="" selected>Categoria</option>
                         <option value="PN">Aro</option>
                         <option value="PN">Pneu</option>
                         <option value="PN">Cubo</option>
@@ -58,12 +58,14 @@
                         <option value="PN">Suspensão</option>
                     </select>
                 </p>
-                <p><input type="number" required placeholder="Valor Unitário" step="0.01"></p>
-                <p>
-                    <input type="submit" value="💾 Salvar" class="botoes" id="salvar">
-                    <input type="reset" value="🔄 Resetar" class="botoes">
-                
-                </p>
+                <p><input type="number" required placeholder="Valor Unitário" step="0.01" id="valor"></p>
+
+                <div id="container_botoes">
+                    <input type="submit" value="💾 Salvar" class="botoes">
+                    <input type="reset" value="🔄 Resetar"class="botoes"                                >
+                </div>
+
+                <p id="res"></p>
             </form>
         </div>
 
@@ -84,15 +86,7 @@
                             <th scope="col">Ações</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                        </tr>
+                    <tbody id="lista_produtos">
                     </tbody>
                     <tfoot>
                         <p id="res"></p>
