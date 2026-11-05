@@ -241,6 +241,8 @@ td {
   border-right: 1px solid black;
   border-bottom: 1px solid black;
   padding: 3px;
+  height: 15px;
+  caret-color: transparent;
 }
 
 td:nth-child(2),
@@ -251,16 +253,52 @@ td:nth-child(4) {
 td:nth-child(3) > div,
 td:nth-child(5) > div,
 td:nth-child(6) > div {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+}
+
+td:nth-child(6) > div {
+
+  justify-content: center;
+}
+
+td:nth-child(6) > div > button {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 50%;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+td:nth-child(6) > div > button:hover {
+  background-color: rgb(215, 215, 215);
+  transform: scale(1.1);
+}
+
+td:nth-child(6) > div > button:active {
+  transform: scale(0.95);
+}
+
+td:nth-child(6) > div > button:nth-child(1) {
+  background-image: url("https://icons.iconarchive.com/icons/saki/nuoveXT/128/Actions-pencil-icon.png");
+}
+
+td:nth-child(6) > div > button:nth-child(2) {
+  background-image: url("https://icons.iconarchive.com/icons/awicons/vista-artistic/128/delete-icon.png");
+}
+
+td:nth-child(6) > div > button:nth-child(1) {
+  margin-left: 8px;
 }
 
 th:last-child,
 td:last-child {
   border-right: none;
 }
-
-
 
 footer {
   width: 100%;

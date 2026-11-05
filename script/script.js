@@ -10,8 +10,8 @@ function naoEspaco() {
   }
 }
 
-function cadastrar(event) {
-  event.preventDefault();
+function cadastrar(evento) {
+  evento.preventDefault()
 
   let cod_barra = window.document.getElementById("cod_barra").value;
   let quantidade = window.document.getElementById("quantidade").value;
@@ -26,15 +26,17 @@ function cadastrar(event) {
   let td_categoria = window.document.createElement("td");
   let td_valor = window.document.createElement("td");
   let td_acao = window.document.createElement("td");
+
   let div_quantidade = window.document.createElement("div");
   let div_valor = window.document.createElement("div");
   let div_acao = window.document.createElement("div");
+
   let span_quntidade_numero = window.document.createElement("span");
   let span_quntidade_sigla = window.document.createElement("span");
   let span_valor_sigla = window.document.createElement("span");
   let span_valor_numero = window.document.createElement("span");
-  let span_acao_editar = window.document.createElement("span");
-  let span_acao_excluir = window.document.createElement("span");
+  let button_acao_editar = window.document.createElement("button");
+  let button_acao_excluir = window.document.createElement("button");
 
   td_nome_produto.textContent = nome_produto.value;
   td_cod_barra.textContent = cod_barra;
@@ -61,11 +63,11 @@ function cadastrar(event) {
   div_valor.appendChild(span_valor_numero);
   td_valor.appendChild(div_valor);
 
-  span_acao_editar.textContent = '+';
-  span_acao_excluir.textContent = '-';
+  button_acao_editar.textContent = '';
+  button_acao_excluir.textContent = '';
   
-  div_acao.appendChild(span_acao_editar);
-  div_acao.appendChild(span_acao_excluir);
+  div_acao.appendChild(button_acao_editar);
+  div_acao.appendChild(button_acao_excluir);
   td_acao.appendChild(div_acao);
 
 
