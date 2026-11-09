@@ -1,5 +1,5 @@
-export function salvar(produtos) {
-    localStorage.setItem('produtos', JSON.stringify(produtos))
+export function salvar(registro) {
+    localStorage.setItem('produtos', JSON.stringify(registro))
 }
 
 export function recuperar() {
